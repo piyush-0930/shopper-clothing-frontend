@@ -8,7 +8,7 @@ const Item = (props) => {
         <Link to={`/product/${props.id}`}>
           <img
             onClick={() => window.scrollTo(0, 0)}
-            src={`https://shopper-clothing-backend.onrender.com/images/${props.image}`}
+            src={props.image?.replace('http://', 'https://')}
             alt=""
           />
         </Link>
